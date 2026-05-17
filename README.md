@@ -45,7 +45,7 @@ This vault structure empowers you to:
 - **`_Assets/`**: Images, PDFs, etc.
 - **`_Bases/`**: Database views (if using the Obsidian Bases plugin).
 - **`_Templates/`**: Reusable markdown templates.
-- **`99 Context/`**: Sub-vaults or specific context areas.
+- **`_Random/`**: Sub-vaults or specific context areas.
 - **`Archive/`**: Completed projects.
 
 ## 🤖 AI Configuration & Skills

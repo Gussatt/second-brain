@@ -21,7 +21,7 @@ mkdir -p "$TARGET_DIR/07 Summaries"
 mkdir -p "$TARGET_DIR/_Assets"
 mkdir -p "$TARGET_DIR/_Bases"
 mkdir -p "$TARGET_DIR/_Templates"
-mkdir -p "$TARGET_DIR/99 Context"
+mkdir -p "$TARGET_DIR/_Random"
 mkdir -p "$TARGET_DIR/Archive"
 
 # Create placeholder wiki files
