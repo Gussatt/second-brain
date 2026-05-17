@@ -16,7 +16,9 @@ mkdir -p "$TARGET_DIR/02 Daily/$(date +%Y)/$(date +%m)"
 mkdir -p "$TARGET_DIR/03 Meetings/Transcriptions"
 mkdir -p "$TARGET_DIR/04 People"
 mkdir -p "$TARGET_DIR/05 Projects"
-mkdir -p "$TARGET_DIR/06 Wiki/pages"
+mkdir -p "$TARGET_DIR/06 Wiki/wiki/pages"
+mkdir -p "$TARGET_DIR/06 Wiki/raw"
+mkdir -p "$TARGET_DIR/06 Wiki/assets"
 mkdir -p "$TARGET_DIR/07 Summaries"
 mkdir -p "$TARGET_DIR/_Assets"
 mkdir -p "$TARGET_DIR/_Bases"
@@ -25,9 +27,42 @@ mkdir -p "$TARGET_DIR/_Random"
 mkdir -p "$TARGET_DIR/Archive"
 
 # Create placeholder wiki files
-touch "$TARGET_DIR/06 Wiki/index.md"
-touch "$TARGET_DIR/06 Wiki/log.md"
-touch "$TARGET_DIR/06 Wiki/overview.md"
+cat << "EOF" > "$TARGET_DIR/06 Wiki/SCHEMA.md"
+# Wiki Schema
+Wiki Root: .
+EOF
+
+cat << "EOF" > "$TARGET_DIR/06 Wiki/wiki/index.md"
+---
+unread: true
+---
+
+## Sources
+
+## Entities & Concepts
+EOF
+
+cat << "EOF" > "$TARGET_DIR/06 Wiki/wiki/log.md"
+---
+unread: true
+---
+
+## [$(date +%Y-%m-%d)] Init
+- Vault initialized.
+EOF
+
+cat << "EOF" > "$TARGET_DIR/06 Wiki/wiki/overview.md"
+---
+title: Overview
+tags: [overview, synthesis]
+sources: []
+unread: true
+---
+
+## Overview
+
+> Evolving synthesis of everything in the wiki.
+EOF
 
 # Copy templates if they exist in the repository
 if [ -d "templates" ]; then
