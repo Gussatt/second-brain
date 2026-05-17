@@ -1,6 +1,6 @@
-# Powerhouse Vault Template
+# Vault Template
 
-Welcome to the Powerhouse Vault template! This repository contains the structure, guidelines, and AI skills needed to bootstrap a hybrid **Second Brain** and **Powerhouse Wiki** in Obsidian.
+Welcome to the Vault template! This repository contains the structure, guidelines, and AI skills needed to bootstrap a hybrid **Second Brain** and **Wiki** in Obsidian.
 
 This system is designed to balance the action-oriented tracking of daily life (meetings, people, projects) with rigorous, citable knowledge synthesis.
 
@@ -20,7 +20,16 @@ This system is designed to balance the action-oriented tracking of daily life (m
 
 This vault serves two main purposes:
 - **Second Brain**: For ephemeral or chronological data like daily logs (`02 Daily/`), meetings (`03 Meetings/`), relationships (`04 People/`), and active projects (`05 Projects/`).
-- **Powerhouse Wiki**: For formal knowledge (`06 Wiki/`). Here, knowledge is distilled into flat, slug-named files, and every claim is backed by strict footnotes.
+- **Wiki**: For formal knowledge (`06 Wiki/`). Here, knowledge is distilled into flat, slug-named files, and every claim is backed by strict footnotes.
+
+## 🌟 Capabilities
+
+This vault structure empowers you to:
+- **Capture Everything**: Quickly log raw thoughts, links, and documents into the `00 Inbox/`.
+- **Maintain Context**: Keep track of people, meetings, and projects organically as they evolve.
+- **Synthesize Knowledge**: Transform raw notes into a rigorous, citable knowledge base in the `06 Wiki/`.
+- **Automate with AI**: Leverage built-in AI skills to ingest data, summarize content, and structure meetings automatically.
+- **Obsidian Web Clipper (Optional but Recommended)**: We highly recommend using the [Obsidian Web Clipper](https://obsidian.md/clipper) extension for your browser. It integrates perfectly with the `00 Inbox/`, allowing you to seamlessly clip articles, recipes, or documentation directly into your vault for later processing and summarization.
 
 ## 📂 Directory Structure
 
@@ -38,28 +47,24 @@ This vault serves two main purposes:
 - **`99 Context/`**: Sub-vaults or specific context areas.
 - **`Archive/`**: Completed projects.
 
-## 📏 Core Rules
-
-> **CRITICAL: The "No H1" Rule**
-> Never add `# Title` headings to notes. Obsidian displays the filename as the H1. Start every note with YAML frontmatter, then go straight into `##` headings or callouts.
-
-- **Unread Tracking**: Every new or modified note must have `unread: true` in its frontmatter.
-- **Backlinks over Tags**: Prefer linking (`[[Concept]]`) over tags (`#tag`). Links provide context.
-
-## 🏛️ The Wiki (Powerhouse)
-
-- **Naming**: Pages in `06 Wiki/pages/` must be lowercase with hyphens (e.g., `machine-learning.md`).
-- **Strict Citations**: Cite every non-trivial factual claim using footnotes `[^1]`.
-  - *Quote Citation*: `[^1]: [[source-slug]] §1.1 — "Direct quote here"`
-  - *Synthesis Citation*: `[^2]: [[source-slug]] §2 — [synthesis] Summary of concepts`
-
 ## 🤖 AI Configuration & Skills
 
 This repository includes `GEMINI.md`, `CLAUDE.md`, and `AGENTS.md` files that instruct LLMs (like Gemini CLI or Claude Code) on how to interact with this specific vault structure.
 
-It also includes specialized skills in `.gemini/skills/` and `.claude/skills/`:
-- **`wiki-ingest`**: Process raw documents into the wiki.
-- **`summarize`**: Distill articles/videos into `07 Summaries/`.
-- **`summarize-call`**: Generate transcripts and meeting notes.
+It also includes specialized skills in `.gemini/skills/` and `.claude/skills/` to turbocharge your workflow. When you run `bootstrap.sh`, these files are copied into your new vault.
 
-When you run `bootstrap.sh`, these files are copied into your new vault, making your AI agents instantly aware of the rules.
+### Included AI Skills
+
+*   **`defuddle`**: Extracts clean markdown content from web pages using Defuddle CLI, removing clutter to save tokens and focus on the main content.
+*   **`json-canvas`**: Creates and edits JSON Canvas files (`.canvas`) for visual mind maps and flowcharts.
+*   **`obsidian-bases`**: Manages `.base` files to create database-like views, filters, and summaries of notes.
+*   **`obsidian-cli`**: Interacts with the vault using the Obsidian CLI to read, search, and manage notes and properties from the command line.
+*   **`obsidian-markdown`**: Native support for creating and editing Obsidian Flavored Markdown, including wikilinks, callouts, properties, and embeds.
+*   **`summarize`**: Summarizes any external content (videos, articles, books) into rich notes with section breakdowns and wikilinks. Output goes to `07 Summaries/`.
+*   **`summarize-call`**: Transcribes and summarizes call recordings, generating dedicated notes for the meeting and participants.
+*   **`vault-update`**: Automates daily updates for the vault, including reading and updating daily briefs and news notes.
+*   **`wiki-audit`**: Fact-checks single wiki pages against their cited sources, ensuring accuracy and surfacing uncited claims.
+*   **`wiki-ingest`**: Processes and adds new source documents (papers, articles, URLs) into the wiki structure.
+*   **`wiki-lint`**: Audits the wiki for health issues, such as contradictions, broken cross-references, and coverage gaps.
+*   **`wiki-query`**: Answers questions based specifically on the content ingested into the personal wiki, rather than general LLM knowledge.
+*   **`wiki-update`**: Safely revises existing wiki pages when new information contradicts or updates current knowledge.

@@ -1,7 +1,7 @@
 #!/bin/bash
 
-# Powerhouse Vault Bootstrap Script
-# This script sets up the folder structure for the Second Brain + Powerhouse Wiki.
+# Vault Bootstrap Script
+# This script sets up the folder structure for the Second Brain + Wiki.
 
 set -e
 
@@ -51,4 +51,4 @@ fi
 echo "✅ Vault structure created successfully!"
 echo "Next steps:"
 echo "1. Open $TARGET_DIR in Obsidian."
-echo "2. Check out the README.md for the core rules and philosophy."
+echo "2. Check out the README.md for the capabilities and philosophy."
