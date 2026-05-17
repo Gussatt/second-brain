@@ -1,6 +1,6 @@
 #!/bin/bash
 
-# Vault Bootstrap Script
+# Second Brain Bootstrap Script
 # This script sets up the folder structure for the Second Brain + Wiki.
 
 set -e

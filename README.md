@@ -1,6 +1,6 @@
-# Vault Template
+# Second Brain
 
-Welcome to the Vault template! This repository contains the structure, guidelines, and AI skills needed to bootstrap a hybrid **Second Brain** and **Wiki** in Obsidian.
+Welcome to the Second Brain template! This repository contains the structure, guidelines, and AI skills needed to bootstrap a hybrid **Second Brain** and **Wiki** in Obsidian.
 
 This system is designed to balance the action-oriented tracking of daily life (meetings, people, projects) with rigorous, citable knowledge synthesis.
 
