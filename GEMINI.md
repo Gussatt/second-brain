@@ -21,7 +21,7 @@ This vault is the user's "second brain" and a "powerhouse wiki". It combines act
 | `_Assets/`          | Images, PDFs (not in 00 Inbox), and other attachments.                                                                                                |
 | `_Bases/`           | Obsidian Bases plugin files (`.base`).                                                                                                                |
 | `_Templates/`       | Reusable note templates.                                                                                                                              |
-| `99 Context/`       | Specialized sub-vaults (e.g., `work/`, `estudos/`, `PQs/`).                                                                                          |
+| `_Random/`       | Specialized sub-vaults (e.g., `work/`, `estudos/`, `PQs/`).                                                                                          |
 | `Archive/`          | Completed or inactive projects.                                                                                                                       |
 
 
