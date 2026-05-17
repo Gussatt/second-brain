@@ -68,3 +68,9 @@ It also includes specialized skills in `.gemini/skills/` and `.claude/skills/` t
 *   **`wiki-lint`**: Audits the wiki for health issues, such as contradictions, broken cross-references, and coverage gaps.
 *   **`wiki-query`**: Answers questions based specifically on the content ingested into the personal wiki, rather than general LLM knowledge.
 *   **`wiki-update`**: Safely revises existing wiki pages when new information contradicts or updates current knowledge.
+
+## 📚 References & Inspiration
+
+This setup is heavily inspired by and builds upon the ideas and workflows shared in the following resources:
+*   [Reysu's AI Life Skills (`reysu/ai-life-skills`)](https://github.com/reysu/ai-life-skills)
+*   [Andrej Karpathy's LLM Workflow Gist](https://gist.github.com/karpathy/442a6bf555914893e9891c11519de94f)
