@@ -35,6 +35,12 @@ if [ -d "templates" ]; then
     cp -r templates/* "$TARGET_DIR/_Templates/"
 fi
 
+# Copy updates if they exist in the repository
+if [ -d "01 Updates" ]; then
+    echo "Copying initial 01 Updates files..."
+    cp -r "01 Updates"/* "$TARGET_DIR/01 Updates/"
+fi
+
 # Copy AI Configs
 echo "Copying AI instructions and skills..."
 cp GEMINI.md "$TARGET_DIR/" 2>/dev/null || true

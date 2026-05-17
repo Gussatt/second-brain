@@ -15,6 +15,7 @@ This system is designed to balance the action-oriented tracking of daily life (m
 3. **Open the vault in Obsidian**.
 4. **Create Today's Daily Note**: Go to `02 Daily/` and create a note for today (e.g., `17-05-2026 Sun.md`). Use it to log your activities.
 5. **Setup Your Person Note**: Create `04 People/Your Name.md`.
+6. **Customize AI Prompts**: Open the files in `01 Updates/` (e.g., `📌 Daily Brief.md`, `📰 Daily News.md`) and edit the prompt instructions within to better align with your specific preferences and workflow.
 
 ## 🧠 Philosophy
 
@@ -74,3 +75,9 @@ It also includes specialized skills in `.gemini/skills/` and `.claude/skills/` t
 This setup is heavily inspired by and builds upon the ideas and workflows shared in the following resources:
 *   [Reysu's AI Life Skills (`reysu/ai-life-skills`)](https://github.com/reysu/ai-life-skills)
 *   [Andrej Karpathy's LLM Workflow Gist](https://gist.github.com/karpathy/442a6bf555914893e9891c11519de94f)
+*   [Kevin Chou's Wiki Skills (`kfchou/wiki-skills`)](https://github.com/kfchou/wiki-skills#)
+*   [Steph Ango's Obsidian Skills (`kepano/obsidian-skills`)](https://github.com/kepano/obsidian-skills)
+
+## 🤝 Contributing
+
+Contributions are welcome! If you have suggestions for new skills, folder structures, or improvements to the AI instructions, please open an issue or submit a pull request.
