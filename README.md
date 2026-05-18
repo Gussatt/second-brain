@@ -33,6 +33,7 @@ This vault structure empowers you to:
 
 ## Directory Structure
 
+```text
 <vault>/
 ├── AGENTS.md          # AI Agent context rules
 ├── CLAUDE.md          # Instructions for Claude Code
@@ -55,6 +56,7 @@ This vault structure empowers you to:
 ├── _Random/           # Sub-vaults or specific context areas
 ├── _Templates/        # Reusable markdown templates
 └── Archive/           # Completed projects
+```
 
 ## AI Configuration & Skills
 
