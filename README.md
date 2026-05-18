@@ -34,6 +34,10 @@ This vault structure empowers you to:
 ## 📂 Directory Structure
 
 <vault>/
+├── AGENTS.md          # AI Agent context rules
+├── CLAUDE.md          # Instructions for Claude Code
+├── GEMINI.md          # Instructions for Gemini CLI
+├── daily_update.sh    # Daily automation script
 ├── 00 Inbox/          # Raw inputs to be processed
 ├── 01 Updates/        # Daily research or topic updates
 ├── 02 Daily/          # Daily notes (The heartbeat of your session)
@@ -48,8 +52,8 @@ This vault structure empowers you to:
 ├── 07 Summaries/      # AI-distilled content
 ├── _Assets/           # Images, PDFs, etc.
 ├── _Bases/            # Database views (Bases plugin)
-├── _Templates/        # Reusable markdown templates
 ├── _Random/           # Sub-vaults or specific context areas
+├── _Templates/        # Reusable markdown templates
 └── Archive/           # Completed projects
 
 ## 🤖 AI Configuration & Skills
