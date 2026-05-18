@@ -74,6 +74,31 @@ It also includes specialized skills in `.gemini/skills/` and `.claude/skills/`. 
 *   **`wiki-query`**: Answers questions based specifically on the content ingested into the personal wiki, rather than general LLM knowledge.
 *   **`wiki-update`**: Safely revises existing wiki pages when new information contradicts or updates current knowledge.
 
+## ⚡ Automation & Scheduling
+
+You can automate repetitive tasks like the "Daily Brief" using **Claude Code** or **Gemini CLI**.
+
+### Claude Code (`/loop` and `/schedule`)
+Claude Code has powerful built-in automation commands:
+- **`/loop <prompt>`**: Runs a prompt in a continuous loop until you stop it.
+- **`/schedule "<cron-expression>" <prompt>`**: Schedules a prompt to run automatically at specific intervals.
+
+Example for a daily brief:
+```bash
+/schedule "0 9 * * *" "Run the vault-update skill to generate today's Daily Brief"
+```
+
+### Cron Jobs (Manual Automation)
+Alternatively, you can use the provided `daily_update.sh` script to run updates via a system-level cron job.
+
+1. Edit `daily_update.sh` to point to your vault and specify your LLM agent command.
+2. Add it to your crontab:
+   ```bash
+   crontab -e
+   # Run every day at 8:00 AM
+   0 9 * * * /path/to/your/vault/daily_update.sh
+   ```
+
 ## 📚 References & Inspiration
 
 This setup is heavily inspired by and builds upon the ideas and workflows shared in the following resources:

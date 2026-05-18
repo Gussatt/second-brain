@@ -69,6 +69,13 @@ if [ -d "01 Updates" ]; then
     cp -r "01 Updates"/* "$TARGET_DIR/01 Updates/"
 fi
 
+# Copy automation scripts
+if [ -f "daily_update.sh" ]; then
+    echo "Copying automation scripts..."
+    cp "daily_update.sh" "$TARGET_DIR/"
+    chmod +x "$TARGET_DIR/daily_update.sh"
+fi
+
 # Copy AI Configs
 echo "Copying AI instructions and skills..."
 cp GEMINI.md "$TARGET_DIR/" 2>/dev/null || true
