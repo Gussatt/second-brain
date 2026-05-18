@@ -20,7 +20,7 @@ It'll help you ingest content through a CLI LLM Agent, like Claude Code or Gemin
 
 This vault serves two main purposes:
 - **Second Brain**: For ephemeral or chronological data like daily logs (`02 Daily/`), meetings (`03 Meetings/`), relationships (`04 People/`), and active projects (`05 Projects/`).
-- **Wiki**: For raw sources (`raw/`) and formal knowledge (`wiki/`). Here, knowledge is distilled into flat, slug-named files, and every claim is backed by strict footnotes, which you can then ask your Agent to query for important information!
+- **Wiki**: For formal knowledge (`06 Wiki/`). Here, knowledge is distilled into flat, slug-named files, and every claim is backed by strict footnotes, which you can then ask your Agent to query for important information!
 
 ## 🌟 Capabilities
 
@@ -40,13 +40,10 @@ This vault structure empowers you to:
 - **`04 People/`**: Rich snapshots of your relationships.
 - **`05 Projects/`**: Active, multi-step goals.
 - **`06 Wiki/`**: The core knowledge base.
-    - `SCHEMA.md`: Conventions + wiki root path (how skills find the wiki).
-    - `raw/`: Immutable source documents.
-    - `wiki/index.md`: Content catalog — every page, one-line summary.
-    - `wiki/log.md`: Append-only operation log.
-    - `wiki/overview.md`: Evolving synthesis of everything known.
-    - `wiki/pages/`: All wiki pages, flat, slug-named.
-    - `assets/`: Images, PDFs, attachments.
+    - `index.md`: Content catalog — every page, one-line summary.
+    - `log.md`: Append-only operation log.
+    - `overview.md`: Evolving synthesis of everything known.
+    - `pages/`: All wiki pages, flat, slug-named.
 - **`07 Summaries/`**: AI-distilled content.
 - **`_Assets/`**: Images, PDFs, etc.
 - **`_Bases/`**: Database views (if using the Obsidian Bases plugin).

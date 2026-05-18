@@ -16,9 +16,7 @@ mkdir -p "$TARGET_DIR/02 Daily/$(date +%Y)/$(date +%m)"
 mkdir -p "$TARGET_DIR/03 Meetings/Transcriptions"
 mkdir -p "$TARGET_DIR/04 People"
 mkdir -p "$TARGET_DIR/05 Projects"
-mkdir -p "$TARGET_DIR/06 Wiki/wiki/pages"
-mkdir -p "$TARGET_DIR/06 Wiki/raw"
-mkdir -p "$TARGET_DIR/06 Wiki/assets"
+mkdir -p "$TARGET_DIR/06 Wiki/pages"
 mkdir -p "$TARGET_DIR/07 Summaries"
 mkdir -p "$TARGET_DIR/_Assets"
 mkdir -p "$TARGET_DIR/_Bases"
@@ -27,12 +25,7 @@ mkdir -p "$TARGET_DIR/_Random"
 mkdir -p "$TARGET_DIR/Archive"
 
 # Create placeholder wiki files
-cat << "EOF" > "$TARGET_DIR/06 Wiki/SCHEMA.md"
-# Wiki Schema
-Wiki Root: .
-EOF
-
-cat << "EOF" > "$TARGET_DIR/06 Wiki/wiki/index.md"
+cat << "EOF" > "$TARGET_DIR/06 Wiki/index.md"
 ---
 unread: true
 ---
@@ -42,7 +35,7 @@ unread: true
 ## Entities & Concepts
 EOF
 
-cat << "EOF" > "$TARGET_DIR/06 Wiki/wiki/log.md"
+cat << "EOF" > "$TARGET_DIR/06 Wiki/log.md"
 ---
 unread: true
 ---
@@ -51,7 +44,7 @@ unread: true
 - Vault initialized.
 EOF
 
-cat << "EOF" > "$TARGET_DIR/06 Wiki/wiki/overview.md"
+cat << "EOF" > "$TARGET_DIR/06 Wiki/overview.md"
 ---
 title: Overview
 tags: [overview, synthesis]
