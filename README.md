@@ -115,6 +115,6 @@ This setup is heavily inspired by and builds upon the ideas and workflows shared
 
 Contributions are welcome! If you have suggestions for new skills, folder structures, or improvements to the AI instructions, please open an issue or submit a pull request.
 
-## 📄 License
+## License
 
 MIT
