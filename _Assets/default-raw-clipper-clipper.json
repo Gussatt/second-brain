@@ -1,0 +1,56 @@
+{
+	"schemaVersion": "0.1.0",
+	"name": "Default Raw Clipper",
+	"behavior": "create",
+	"noteContentFormat": "{{content}}",
+	"properties": [
+		{
+			"name": "Title",
+			"value": "{{title}}",
+			"type": "text"
+		},
+		{
+			"name": "Source",
+			"value": "{{url}}",
+			"type": "text"
+		},
+		{
+			"name": "Site",
+			"value": "{{site}}",
+			"type": "text"
+		},
+		{
+			"name": "Author",
+			"value": "{{author|wikilink}}",
+			"type": "text"
+		},
+		{
+			"name": "Published",
+			"value": "{{published|date:\"YYYY-MM-DD\"}}",
+			"type": "date"
+		},
+		{
+			"name": "Created",
+			"value": "{{date|date:\"YYYY-MM-DD\"}}",
+			"type": "date"
+		},
+		{
+			"name": "Words",
+			"value": "{{words}}",
+			"type": "number"
+		},
+		{
+			"name": "Reading time (min)",
+			"value": "{{words|calc:\"/238\"|round}}",
+			"type": "number"
+		},
+		{
+			"name": "tags",
+			"value": "{{selector:a[href^=\"\\tag/\"] > div|replace:(\"\":\"-\")}}",
+			"type": "multitext"
+		}
+	],
+	"triggers": [],
+	"noteNameFormat": "{{title}}",
+	"path": "00 Inbox"
+}

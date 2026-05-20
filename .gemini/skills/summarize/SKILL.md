@@ -224,33 +224,19 @@ For book chapter-by-chapter depth (Step 1 book section), detailed mode gets the 
 ## Step 1: Detect content type and extract text
 
 ### YouTube video
+Use the `inbox-fetcher` skill to retrieve the content:
 ```bash
-# Get metadata
-yt-dlp --cookies-from-browser chrome \
-  --print "%(id)s|%(title)s|%(duration)s|%(upload_date)s|%(view_count)s|%(channel)s|%(channel_id)s" \
-  --no-download "<URL>"
-
-# Try auto-subtitles first (fastest, free)
-yt-dlp --cookies-from-browser chrome \
-  --write-auto-sub --sub-lang en --sub-format json3 \
-  --skip-download -o "/tmp/summarize/%(id)s" "<URL>"
+python3 inbox_fetcher.py "<URL>"
 ```
-
-If auto-subs exist, extract text from the JSON3 file. If not, or if quality is poor:
-- Download audio and transcribe (same as `youtube-transcribe` skill — ask user: local mlx_whisper or ElevenLabs Scribe)
+Then read the generated file from `00 Inbox/`. If the video is long or needs high-quality transcription, fall back to downloading audio and transcribing (same as `youtube-transcribe` skill — ask user: local mlx_whisper or ElevenLabs Scribe).
 
 ### Web article / blog post
+Use the `inbox-fetcher` skill to retrieve the content:
 ```bash
-defuddle parse "<URL>" --md -o /tmp/summarize/article.md
+python3 inbox_fetcher.py "<URL>"
 ```
+Then read the generated file from `00 Inbox/`.
 
-If defuddle is not installed: `npm install -g defuddle`
-
-Extract title, author, date, domain from defuddle metadata:
-```bash
-defuddle parse "<URL>" -p title
-defuddle parse "<URL>" -p domain
-```
 
 ### PDF
 ```bash
@@ -312,6 +298,9 @@ For plain text: read directly.
 
 ### Pasted text / vault note
 Read directly from user message or vault path.
+
+## Step 1a: Check unread status
+If the source is a file in the vault, check if its frontmatter includes `unread: true`. If it does, inform the user that you are processing an unread note.
 
 ## Step 1b: Save transcript (audio/video content only)
 

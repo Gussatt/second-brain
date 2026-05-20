@@ -34,7 +34,10 @@ Read `GEMINI.md` to learn: wiki root path, page frontmatter format, cross-refere
 
 The source can be:
 - **File path** — read it directly; copy to `00 Inbox/<filename>` if not already there
-- **URL** — use the `browse` skill to fetch it; save to `00 Inbox/<slug>.<ext>`
+- **URL** — use the `inbox-fetcher` skill to fetch it; saves to `00 Inbox/` using the appropriate template.
+   ```bash
+   python3 inbox_fetcher.py "<URL>"
+   ```
 - **Pasted text** — use what was provided
 
 **Link to Summarize Skill:** If the source is a YouTube video, PDF, EPUB, podcast, or long article, trigger the `summarize` skill first to generate a high-fidelity summary in `07 Summaries/` before proceeding with ingestion. This ensures the wiki has access to a deeply synthesized version of the content.
@@ -42,6 +45,8 @@ The source can be:
 ### Step 2: Read the source in full
 
 Read all content. For long sources, read in sections. Do not skip.
+
+**Check unread status:** If the source is a file in the vault, check if its frontmatter includes `unread: true`. If it does, inform the user that you are processing an unread note.
 
 ### Step 3: Surface takeaways — BEFORE writing anything
 
